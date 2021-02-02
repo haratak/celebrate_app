@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: '恵美ちゃん爆誕祝',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -105,87 +105,143 @@ class _SecondPageState extends State<SecondPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Expanded(child: SizedBox()),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                AnimatedDefaultTextStyle(
-                  child: Text('C'),
-                  style: TextStyle(
-                    fontSize: 50,
-                    color: animated ? Colors.white : Colors.orange,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  child: AnimatedDefaultTextStyle(
+                    child: Text('C'),
+                    style: TextStyle(
+                        fontSize: 50,
+                        color: animated ? Colors.white : Colors.orange,
+                        fontFamily: 'Hanalei-Regular'),
+                    duration: Duration(milliseconds: 800),
                   ),
-                  duration: Duration(milliseconds: 800),
                 ),
-                AnimatedDefaultTextStyle(
-                  child: Text('O'),
-                  style: TextStyle(
-                    fontSize: 50,
-                    color: animated ? Colors.white : Colors.amber,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  child: AnimatedDefaultTextStyle(
+                    child: Text('O'),
+                    style: TextStyle(
+                        fontSize: 50,
+                        color: animated ? Colors.white : Colors.amber,
+                        fontFamily: 'Hanalei-Regular'),
+                    duration: Duration(milliseconds: 800),
                   ),
-                  duration: Duration(milliseconds: 800),
                 ),
-                AnimatedDefaultTextStyle(
-                  child: Text('N'),
-                  style: TextStyle(
-                    fontSize: 50,
-                    color: animated ? Colors.white : Colors.orangeAccent,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  child: AnimatedDefaultTextStyle(
+                    child: Text('N'),
+                    style: TextStyle(
+                        fontSize: 50,
+                        color: animated ? Colors.white : Colors.orangeAccent,
+                        fontFamily: 'Hanalei-Regular'),
+                    duration: Duration(milliseconds: 800),
                   ),
-                  duration: Duration(milliseconds: 800),
                 ),
-                AnimatedDefaultTextStyle(
-                  child: Text('G'),
-                  style: TextStyle(
-                    fontSize: 50,
-                    color: animated ? Colors.white : Colors.lightBlue,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  child: AnimatedDefaultTextStyle(
+                    child: Text('G'),
+                    style: TextStyle(
+                        fontSize: 50,
+                        color: animated ? Colors.white : Colors.lightBlue,
+                        fontFamily: 'Hanalei-Regular'),
+                    duration: Duration(milliseconds: 800),
                   ),
-                  duration: Duration(milliseconds: 800),
                 ),
-                AnimatedDefaultTextStyle(
-                  child: Text('R'),
-                  style: TextStyle(
-                    fontSize: 50,
-                    color: animated ? Colors.white : Colors.redAccent,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  child: AnimatedDefaultTextStyle(
+                    child: Text('R'),
+                    style: TextStyle(
+                        fontSize: 50,
+                        color: animated ? Colors.white : Colors.redAccent,
+                        fontFamily: 'Hanalei-Regular'),
+                    duration: Duration(milliseconds: 800),
                   ),
-                  duration: Duration(milliseconds: 800),
                 ),
-                AnimatedDefaultTextStyle(
-                  child: Text('A'),
-                  style: TextStyle(
-                    fontSize: 50,
-                    color: animated ? Colors.white : Colors.purple,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  child: AnimatedDefaultTextStyle(
+                    child: Text('A'),
+                    style: TextStyle(
+                        fontSize: 50,
+                        color: animated ? Colors.white : Colors.purple,
+                        fontFamily: 'Hanalei-Regular'),
+                    duration: Duration(milliseconds: 800),
                   ),
-                  duration: Duration(milliseconds: 800),
                 ),
                 AnimatedDefaultTextStyle(
                   child: Text('T'),
                   style: TextStyle(
-                    fontSize: 50,
-                    color: animated ? Colors.white : Colors.yellow,
-                  ),
+                      fontSize: 50,
+                      color: animated ? Colors.white : Colors.yellow,
+                      fontFamily: 'Hanalei-Regular'),
                   duration: Duration(milliseconds: 800),
                 ),
-                AnimatedDefaultTextStyle(
-                  child: Text('S'),
-                  style: TextStyle(
-                    fontSize: 50,
-                    color: animated ? Colors.white : Colors.green,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 5),
+                  child: AnimatedDefaultTextStyle(
+                    child: Text('S'),
+                    style: TextStyle(
+                        fontSize: 50,
+                        color: animated ? Colors.white : Colors.green,
+                        fontFamily: 'Hanalei-Regular'),
+                    duration: Duration(milliseconds: 800),
                   ),
-                  duration: Duration(milliseconds: 800),
                 ),
               ],
             ),
             Text(
               'on your new baby!',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 26,
+                  fontFamily: 'ArchitectsDaughter-Regular'),
             ),
-            Text(
-              '出産おめでとう！！！',
-              style: TextStyle(color: Colors.orange),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Text(
+                '出産おめでとう！\nささやかですが、お祝いの品を贈ります。\n少しだけど、2人で食べてゆったり休んでね。\n$babyName\ちゃん👶に会える日を楽しみにしてまっせ！',
+                style: TextStyle(
+                    color: Colors.orange,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    height: 2),
+              ),
             ),
-            IconButton(
-              icon: Icon(Icons.card_giftcard),
-              onPressed: () => _launchURL(),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                width: double.infinity,
+                child: IconButton(
+                  icon: Icon(
+                    Icons.card_giftcard,
+                    size: 40,
+                  ),
+                  onPressed: () => _launchURL(),
+                ),
+              ),
             ),
+            Text('/ Tap Me!! \\ '),
+            Expanded(child: SizedBox()),
+            Align(
+              alignment: Alignment.centerRight,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                        'Created by $myEnglishName and $myPartnerEnglishName with Flutter.'),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
@@ -221,23 +277,23 @@ class _CelebratePageState extends State<CelebratePage> {
         ),
         Text(
           '御',
-          style: TextStyle(fontSize: 50),
+          style: TextStyle(fontSize: 30, fontFamily: 'SawarabiMincho-Regular'),
         ),
         Text(
           '出',
-          style: TextStyle(fontSize: 50),
+          style: TextStyle(fontSize: 30, fontFamily: 'SawarabiMincho-Regular'),
         ),
         Text(
           '産',
-          style: TextStyle(fontSize: 50),
+          style: TextStyle(fontSize: 30, fontFamily: 'SawarabiMincho-Regular'),
         ),
         Text(
           '御',
-          style: TextStyle(fontSize: 50),
+          style: TextStyle(fontSize: 30, fontFamily: 'SawarabiMincho-Regular'),
         ),
         Text(
           '祝',
-          style: TextStyle(fontSize: 50),
+          style: TextStyle(fontSize: 30, fontFamily: 'SawarabiMincho-Regular'),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -285,15 +341,13 @@ class _CelebratePageState extends State<CelebratePage> {
             ),
           ],
         ),
-        SizedBox(
-          height: 60,
-        ),
-        Text(
-          firstName,
-          style: TextStyle(fontSize: 50),
-        ),
-        SizedBox(
-          height: 60,
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20),
+          child: Text(
+            firstName,
+            style:
+                TextStyle(fontSize: 30, fontFamily: 'SawarabiMincho-Regular'),
+          ),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -302,11 +356,13 @@ class _CelebratePageState extends State<CelebratePage> {
               children: [
                 Text(
                   myPartnerLastName[0],
-                  style: TextStyle(fontSize: 50),
+                  style: TextStyle(
+                      fontSize: 30, fontFamily: 'SawarabiMincho-Regular'),
                 ),
                 Text(
                   myPartnerLastName[1],
-                  style: TextStyle(fontSize: 50),
+                  style: TextStyle(
+                      fontSize: 30, fontFamily: 'SawarabiMincho-Regular'),
                 ),
               ],
             ),
@@ -314,18 +370,17 @@ class _CelebratePageState extends State<CelebratePage> {
               children: [
                 Text(
                   myLastName[0],
-                  style: TextStyle(fontSize: 50),
+                  style: TextStyle(
+                      fontSize: 30, fontFamily: 'SawarabiMincho-Regular'),
                 ),
                 Text(
                   myLastName[1],
-                  style: TextStyle(fontSize: 50),
+                  style: TextStyle(
+                      fontSize: 30, fontFamily: 'SawarabiMincho-Regular'),
                 ),
               ],
             ),
           ],
-        ),
-        SizedBox(
-          height: 50,
         ),
         Expanded(
           child: SizedBox(),
